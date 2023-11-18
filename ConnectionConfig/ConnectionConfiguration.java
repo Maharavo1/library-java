@@ -24,5 +24,4 @@ public class ConnectionConfiguration {
             throw new RuntimeException(e);
         }
     }
-
 }
