@@ -10,9 +10,9 @@ public class ConnectionConfiguration {
     private String USER ;
 
     public ConnectionConfiguration() {
-        this.URL = "jdbc:postgresql://localhost/library_management";
-        this.USER = "postgres";
-        this.PASS = "root";
+        this.URL = "jdbc:postgresql://localhost/"+System.getenv("DB_URL");
+        this.USER = System.getenv("DB_USER");
+        this.PASS = System.getenv("DB_PASSWORD");
     }
     public Connection createConnection(){
         try{
